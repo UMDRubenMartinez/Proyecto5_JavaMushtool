@@ -26,4 +26,9 @@ public class MainController {
         return "login/login";
     }
     
+    @GetMapping("/Ranking")
+    public String ranking(){
+        return "ranking/Ranking";
+    }
+    
 }
