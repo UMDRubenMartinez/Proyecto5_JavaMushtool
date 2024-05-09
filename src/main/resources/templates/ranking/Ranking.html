@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Setas - Página Principal</title>
     <!-- Bootstrap CSS -->
-    <link rel="icon" href="seta.png" type="image/x-icon">
+    <link rel="icon" href="images/seta.png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
     <style>
@@ -49,7 +49,7 @@
     </style>
 </head>
 
-<body  style="background-image: url(mushrooms-548360_1280.jpg);">
+<body  style="background-image: url(images/mushrooms-548360_1280.jpg);">
     <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Mushtool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -73,7 +73,7 @@
     </nav>-->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(70, 43, 19);">
         <a class="navbar-brand" href="Inicio.html">
-            <img src="unnamed-removebg-preview.png" alt="Mushtool" style="height: 40px; width: auto;">
+            <img src="images/unnamed-removebg-preview.png" alt="Mushtool" style="height: 40px; width: auto;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,10 +83,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-light" href="home.html" id="InicioButton">Administración<span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-light" href="home" id="InicioButton">Administración<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-light" href="Ranking.html">Ranking<span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-light" href="Ranking">Ranking<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <button class="btn btn-outline-success" id="signOutButton" type="button">Log out</button>
@@ -118,9 +118,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="home.html" type="module"></script>
-    <script src="auth2.js" type="module"></script>
-    <script type="module" src="index.js"></script>
+    <script src="js/home.html" type="module"></script>
+    <script src="js/auth2.js" type="module"></script>
+    <script type="module" src="js/index.js"></script>
     <script>
         window.onload = function (){
             var roleUser = JSON.parse(sessionStorage.getItem("user-info"));
@@ -128,7 +128,7 @@
                 document.getElementById("InicioButton").style.display = "none";
                 document.getElementById("signOutButton").textContent = "Sign In";
                 document.getElementById("signOutButton").onclick = function(){
-                    window.location.href = "login.html"
+                    window.location.href = "login";
                 };
             }
             else if(roleUser.role == "Usuario"){
